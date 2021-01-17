@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fading_Objects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yeq-07-XNT">
+                                <rect key="frame" x="0.0" y="297" width="375" height="203"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsL-Qw-18U">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                        <state key="normal" title="Fade In"/>
+                                        <connections>
+                                            <action selector="fadeIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H87-br-mjS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jca-oN-du9">
+                                        <rect key="frame" x="0.0" y="71" width="375" height="61"/>
+                                        <state key="normal" title="Fade Out"/>
+                                        <connections>
+                                            <action selector="fadeOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xQj-tG-bFg"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2cP-5q-ipp">
+                                        <rect key="frame" x="-2" y="142" width="379" height="62"/>
+                                        <color key="minimumTrackTintColor" systemColor="linkColor"/>
+                                        <color key="maximumTrackTintColor" red="0.39233405669999999" green="1" blue="0.59992607320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="0.99720090630000002" green="0.94442433120000002" blue="0.97294300789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="alfaSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="JuI-tE-B5T"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="yhv-3q-hRj">
+                                <rect key="frame" x="0.0" y="69" width="375" height="203"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="the-Wf-pdl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="31.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk8-KD-Rm7">
+                                        <rect key="frame" x="0.0" y="56.333333333333329" width="375" height="46.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kye-zh-RLZ">
+                                        <rect key="frame" x="0.0" y="127.66666666666666" width="375" height="76.333333333333343"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" name="AccentColor"/>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yeq-07-XNT" firstAttribute="top" secondItem="yhv-3q-hRj" secondAttribute="bottom" constant="25" id="0Ox-Wq-BJ3"/>
+                            <constraint firstItem="yhv-3q-hRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="CH2-5T-bli"/>
+                            <constraint firstItem="yeq-07-XNT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="SrL-Pp-NST"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yeq-07-XNT" secondAttribute="trailing" id="V2c-lQ-ujH"/>
+                            <constraint firstItem="yhv-3q-hRj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="e7a-4g-teM"/>
+                            <constraint firstItem="yeq-07-XNT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="exF-Wl-oYH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhv-3q-hRj" secondAttribute="trailing" id="lDz-Qy-xEU"/>
+                            <constraint firstItem="yhv-3q-hRj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wXg-zj-SEa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="vk8-KD-Rm7" id="0SM-DZ-IJ5"/>
+                        <outlet property="label" destination="the-Wf-pdl" id="gnt-eX-eG1"/>
+                        <outlet property="segControl" destination="Kye-zh-RLZ" id="goj-iU-WJh"/>
+                        <outlet property="slider" destination="2cP-5q-ipp" id="3WK-o7-dBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

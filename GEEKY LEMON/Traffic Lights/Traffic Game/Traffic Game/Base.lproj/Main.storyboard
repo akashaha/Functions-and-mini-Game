@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-Sg-i8D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="4Z4-7p-jsn">
+                                <rect key="frame" x="25" y="30" width="325" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="0iK-Ks-Gqj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-tL-ti2">
+                                <rect key="frame" x="80" y="442" width="215" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qgD-tL-ti2" secondAttribute="height" multiplier="43:40" id="CnY-d4-KDB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <state key="normal" title="Start" backgroundImage="stopButton">
+                                    <color key="titleColor" red="0.99720090630000002" green="0.94442433120000002" blue="0.97294300789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1rr-BY-K2I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Ei5-eM-TgZ">
+                                <rect key="frame" x="0.0" y="183" width="375" height="259"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="110"/>
+                                <color key="textColor" red="0.99720090630000002" green="0.94442433120000002" blue="0.97294300789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qgD-tL-ti2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="1zI-QS-PXQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nSX-Sg-i8D" secondAttribute="bottom" id="5a7-Hv-fna"/>
+                            <constraint firstItem="4Z4-7p-jsn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="5z2-Vn-gnB"/>
+                            <constraint firstItem="4Z4-7p-jsn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="6NY-Tg-66U"/>
+                            <constraint firstItem="Ei5-eM-TgZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eya-VD-Jia"/>
+                            <constraint firstItem="qgD-tL-ti2" firstAttribute="top" secondItem="Ei5-eM-TgZ" secondAttribute="bottom" id="RZ9-S6-Gg9"/>
+                            <constraint firstItem="Ei5-eM-TgZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZYr-0i-ba1"/>
+                            <constraint firstItem="nSX-Sg-i8D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d2Z-wg-oV8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qgD-tL-ti2" secondAttribute="trailing" constant="80" id="iMb-yh-jiD"/>
+                            <constraint firstItem="Ei5-eM-TgZ" firstAttribute="top" secondItem="4Z4-7p-jsn" secondAttribute="bottom" constant="20" id="ieD-wb-mMB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qgD-tL-ti2" secondAttribute="bottom" constant="25" id="jAR-0x-poq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Z4-7p-jsn" secondAttribute="trailing" constant="25" id="oRb-Js-DdC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nSX-Sg-i8D" secondAttribute="trailing" id="uOI-b4-I8B"/>
+                            <constraint firstItem="nSX-Sg-i8D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xni-DO-3an"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Ei5-eM-TgZ" id="6Um-I9-vDZ"/>
+                        <outlet property="startStopButton" destination="qgD-tL-ti2" id="Wee-wl-sS8"/>
+                        <outlet property="startstopButton" destination="qgD-tL-ti2" id="ry5-bX-EbU"/>
+                        <outlet property="trafficLight" destination="4Z4-7p-jsn" id="5fM-hZ-Rwp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1600" height="900"/>
+        <image name="stopButton" width="1000" height="1000"/>
+        <image name="trafficLight" width="1500" height="600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
